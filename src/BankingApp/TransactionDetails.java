@@ -12,7 +12,9 @@ public class TransactionDetails extends BankAccount{
     TransactionDetails()
     {
         Random rand = new Random();
-        AccNo=Math.abs(rand.nextInt());
+        int low = 300000000;
+        int high = 400000000;
+        AccNo = rand.nextInt(high-low) + low;
     }
     //method to withdraw money
     void withdrawal() {
