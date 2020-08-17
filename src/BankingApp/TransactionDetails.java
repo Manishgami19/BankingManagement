@@ -1,4 +1,5 @@
 package BankingApp;
+import java.util.Random;
 
 public class TransactionDetails extends BankAccount{
     //method to deposit money
@@ -8,7 +9,11 @@ public class TransactionDetails extends BankAccount{
         amt = sc.nextInt();
         balance = balance + amt;
     }
-
+    TransactionDetails()
+    {
+        Random rand = new Random();
+        AccNo=Math.abs(rand.nextInt());
+    }
     //method to withdraw money
     void withdrawal() {
         int amt;
@@ -20,5 +25,4 @@ public class TransactionDetails extends BankAccount{
             System.out.println("Less Balance..Transaction Failed..");
         }
     }
-
 }

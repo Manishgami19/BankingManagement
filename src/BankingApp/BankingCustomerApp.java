@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class BankingCustomerApp {
     public static void main(String[] arg) {
+
         Scanner sc = new Scanner(System.in);
         BankAccount option = new BankAccount();
 
@@ -17,6 +18,7 @@ public class BankingCustomerApp {
             cust[i] = new TransactionDetails();
             System.out.println("\n");
             cust[i].openAccount();
+
         }
         int opt;
         do {
@@ -27,12 +29,14 @@ public class BankingCustomerApp {
                 case 1:
                     for (int i = 0; i < cust.length; i++) {
                         cust[i].showAccount();
+
+
                     }
                     break;
 
                 case 2:
                     System.out.print("Enter Account No U Want to Search...: ");
-                    String acn = sc.next();
+                    int acn = sc.nextInt();
                     boolean found = false;
                     for (int i = 0; i < cust.length; i++){
                         found = cust[i].search(acn);
@@ -47,7 +51,7 @@ public class BankingCustomerApp {
 
                 case 3:
                     System.out.print("Enter Account No : ");
-                    acn = sc.next();
+                    acn = sc.nextInt();
                     found = false;
                     for (int i = 0; i < cust.length; i++) {
                         found = cust[i].search(acn);
@@ -63,7 +67,7 @@ public class BankingCustomerApp {
 
                 case 4:
                     System.out.print("Enter Account No : ");
-                    acn = sc.next();
+                    acn = sc.nextInt();
                     found = false;
                     for (int i = 0; i < cust.length; i++) {
                         found = cust[i].search(acn);
