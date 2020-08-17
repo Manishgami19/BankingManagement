@@ -1,5 +1,4 @@
 package BankingApp;
-import java.util.Random;
 import java.util.Scanner;
 
 public class BankAccount {
@@ -15,17 +14,18 @@ public class BankAccount {
         //System.out.print("Enter Account No: ");
         //AccNo = sc.next();
         System.out.print("Enter Name: ");
-        Custname = sc.next();
-        System.out.print("Enter Balance: ");
+        Custname = sc.nextLine();
+        System.out.print("Enter initial Balance: ");
         balance = sc.nextInt();
+        System.out.print("********************************************");
     }
 
     //method to display account details
     void showAccount(){
         System.out.println("\n");
         System.out.println("Customer Name: " + Custname);
-        System.out.println("initial balance: " + balance);
-        System.out.println("Account num: " + AccNo);
+        System.out.println("Current Balance: " + balance);
+        System.out.println("Generated Account Number: " + AccNo);
     }
     void showOption() {
         System.out.println("\n");
@@ -35,6 +35,7 @@ public class BankAccount {
         System.out.println("3 : Deposit");
         System.out.println("4 : Withdraw");
         System.out.println("5 : EXIT");
+        System.out.print("********************************************");
     }
     boolean search(int acn) {
         if (AccNo == acn)
